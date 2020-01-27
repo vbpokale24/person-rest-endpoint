@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "7dd16b1f-2b91-43cd-b104-810f79535d50",
+		"name": "embl-rest-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAuthToken",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Basic",
+						"value": "c2VjdXJpdHlBZG1pbg==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/securitymanagement/v1/getJwtToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"securitymanagement",
+						"v1",
+						"getJwtToken"
+					]
+				},
+				"description": "This will generate the Authorization token"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPerson",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQxMTcyLCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDQ2Mjl9.0LI6mFAJBtwB51GxCYYH9kBH4oiRZ306mJw2KnJnVyg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/personmanagement/v1/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personmanagement",
+						"v1",
+						"person"
+					]
+				},
+				"description": "This will generate the Authorization token"
+			},
+			"response": []
+		},
+		{
+			"name": "GetPersonByID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQxMTcyLCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDQ2Mjl9.0LI6mFAJBtwB51GxCYYH9kBH4oiRZ306mJw2KnJnVyg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/personmanagement/v1/person/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personmanagement",
+						"v1",
+						"person",
+						"2"
+					]
+				},
+				"description": "This will generate the Authorization token"
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePersonByID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQxMTcyLCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDQ2Mjl9.0LI6mFAJBtwB51GxCYYH9kBH4oiRZ306mJw2KnJnVyg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/personmanagement/v1/person/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personmanagement",
+						"v1",
+						"person",
+						"2"
+					]
+				},
+				"description": "This will generate the Authorization token"
+			},
+			"response": []
+		},
+		{
+			"name": "PatchPersonByID",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQxMTcyLCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDQ2Mjl9.0LI6mFAJBtwB51GxCYYH9kBH4oiRZ306mJw2KnJnVyg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"person\": [\r\n    {\r\n      \"firstName\": \"Vaibhav\",\r\n      \"lastName\": \"Pokale\",\r\n      \"age\": \"37\",\r\n      \"favouriteColor\": \"Blue\",\r\n      \"hobby\": [\r\n        \"Chess\",\r\n        \"Cricket\",\r\n\t\t\t\t\"Patang\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/personmanagement/v1/person/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personmanagement",
+						"v1",
+						"person",
+						"2"
+					]
+				},
+				"description": "This will generate the Authorization token"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQxMTcyLCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDQ2Mjl9.0LI6mFAJBtwB51GxCYYH9kBH4oiRZ306mJw2KnJnVyg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"person\": [\r\n    {\r\n      \"firstName\": \"Vaibhav\",\r\n      \"lastName\": \"Pokale\",\r\n      \"age\": \"29\",\r\n      \"favouriteColor\": \"Blue\",\r\n      \"hobby\": [\r\n        \"Chess\",\r\n        \"Cricket\",\r\n\t\t\t\t\"Foorball\"\r\n      ]\r\n    },\r\n\t\t{\r\n      \"firstName\": \"Bajirao\",\r\n      \"lastName\": \"Pokale\",\r\n      \"age\": \"30\",\r\n      \"favouriteColor\": \"Blue\",\r\n      \"hobby\": [\r\n        \"Chess\",\r\n        \"Cricket\",\r\n\t\t\t\t\"Foorball\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/personmanagement/v1/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personmanagement",
+						"v1",
+						"person"
+					]
+				},
+				"description": "This will generate the Authorization token"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
