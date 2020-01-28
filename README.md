@@ -39,123 +39,122 @@ To deploy the project on the production, Follow same run rules mentioned above.
  **Import the postman collection name embl-rest-Api.postman_collection.json in postman for getting all API in postman.Json collection   present in project itself.** \
  
 
-## 1)Get the authorization token API:
-  Url::http://localhost:8080/securitymanagement/v1/getJwtToken
-  Method Type :: GET
-  Header Parameter:: 
-      1)Content-Type : application/json
-	  2)Basic		 : c2VjdXJpdHlBZG1pbg==
-  Response ::
-       ```json
-       {
-  "subjectToken": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQwMDU3LCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDM1MTR9.GybmBJIovQi7HAR5MeooI5cbrnDMg5_q7fRgYMTPAdo"
-      }
-      ```
-  ###Note: above token will be used to access the API.If token gets expired, user needs to generate the new token.
+## 1)Get the authorization token API::
+ 	 Url::http://localhost:8080/securitymanagement/v1/getJwtToken
+ 	 Method Type :: GET
+ 	 Header Parameter:: 
+      		1)Content-Type : application/json
+	  	2)Basic		 : c2VjdXJpdHlBZG1pbg==
+	  Response ::
+	       {
+	  "subjectToken": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQwMDU3LCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDM1MTR9.GybmBJIovQi7HAR5MeooI5cbrnDMg5_q7fRgYMTPAdo"
+	      }
+	     
+  ###****Note: above token will be used to access the API.If token gets expired, user needs to generate the new token.****
 
 ## 2)Create the persons API::
-  Url::http://localhost:8080/personmanagement/v1/person
-  Method Type:: POST
-  Header Parameter:: 
-      1)Content-Type : application/json
-	  2)Authorization		 : << Above api token generated i.e. subjectToken >>
-  Request Payload:: 
-    ```json
-    {
-	"person": [
-    {
-      "firstName": "Vaibhav",
-      "lastName": "Pokale",
-      "age": "29",
-      "favouriteColor": "Blue",
-      "hobby": [
-        "Chess",
-        "Cricket",
-				"Foorball"
-      ]
-		},
-		{
-      "firstName": "Bajirao",
-      "lastName": "Pokale",
-      "age": "30",
-      "favouriteColor": "Blue",
-      "hobby": [
-        "Chess",
-        "Cricket",
-				"Foorball"
-			]
-		}
-	]
-	}
-	```
+  	Url::http://localhost:8080/personmanagement/v1/person
+  	Method Type:: POST
+  	Header Parameter:: 
+      		1)Content-Type : application/json
+	  	2)Authorization		 : << Above api token generated i.e. subjectToken >>
   
-   Response Payload:: 
-    ```json
-      {
-  "person": [
-    {
-      "id": 1,
-      "firstName": "Vaibhav",
-      "lastName": "Pokale",
-      "age": "29",
-      "favouriteColor": "Blue",
-      "hobby": [
-        "Chess",
-        "Cricket",
-        "Foorball"
-      ]
-    },
-    {
-      "id": 2,
-      "firstName": "Bajirao",
-      "lastName": "Pokale",
-      "age": "30",
-      "favouriteColor": "Blue",
-      "hobby": [
-        "Chess",
-        "Cricket",
-        "Foorball"
+ 	 Request Payload:: 
+   
+	    {
+		"person": [
+	    {
+	      "firstName": "Vaibhav",
+	      "lastName": "Pokale",
+	      "age": "29",
+	      "favouriteColor": "Blue",
+	      "hobby": [
+		"Chess",
+		"Cricket",
+					"Foorball"
+	      ]
+			},
+			{
+	      "firstName": "Bajirao",
+	      "lastName": "Pokale",
+	      "age": "30",
+	      "favouriteColor": "Blue",
+	      "hobby": [
+		"Chess",
+		"Cricket",
+					"Foorball"
 				]
+			}
+		]
 		}
-	]
-	}
-	```
+	 
+   	Response Payload:: 
+   
+	      {
+	  "person": [
+	    {
+	      "id": 1,
+	      "firstName": "Vaibhav",
+	      "lastName": "Pokale",
+	      "age": "29",
+	      "favouriteColor": "Blue",
+	      "hobby": [
+		"Chess",
+		"Cricket",
+		"Foorball"
+	      ]
+	    },
+	    {
+	      "id": 2,
+	      "firstName": "Bajirao",
+	      "lastName": "Pokale",
+	      "age": "30",
+	      "favouriteColor": "Blue",
+	      "hobby": [
+		"Chess",
+		"Cricket",
+		"Foorball"
+					]
+			}
+		]
+		}
+	
 
-## 3) Get all person API:
-   Url::  http://localhost:8080/personmanagement/v1/person
-   Method Type:: GET
-   Header Parameter:: 
-      1)Content-Type : application/json
-	  2)Authorization		 : << Above api token generated i.e. subjectToken >>
-   Response Payload::
-     {
-  "person": [
-    {
-      "id": 1,
-      "firstName": "Vaibhav",
-      "lastName": "Pokale",
-      "age": "29",
-      "favouriteColor": "Blue",
-      "hobby": [
-        "Chess",
-        "Cricket",
-        "Foorball"
-      ]
-    },
-    {
-      "id": 2,
-      "firstName": "Bajirao",
-      "lastName": "Pokale",
-      "age": "30",
-      "favouriteColor": "Blue",
-      "hobby": [
-        "Chess",
-        "Cricket",
-        "Foorball"
-				]
+## 3) Get all person API::
+   	Url::  http://localhost:8080/personmanagement/v1/person
+   	Method Type:: GET
+   	Header Parameter:: 
+      	1)Content-Type : application/json
+	2)Authorization		 : << Above api token generated i.e. subjectToken >>
+  	 Response Payload::
+	     {
+	  "person": [
+	    {
+	      "id": 1,
+	      "firstName": "Vaibhav",
+	      "lastName": "Pokale",
+	      "age": "29",
+	      "favouriteColor": "Blue",
+	      "hobby": [
+		"Chess",
+		"Cricket",
+		"Foorball"
+	      ]
+	    },
+	    {
+	      "id": 2,
+	      "firstName": "Bajirao",
+	      "lastName": "Pokale",
+	      "age": "30",
+	      "favouriteColor": "Blue",
+	      "hobby": [
+		"Chess",
+		"Cricket",
+		"Foorball"
+					]
+			}
+		]
 		}
-	]
-	}
 	
 ## 4) Get person against person_id API::	
     Url::http://localhost:8080/personmanagement/v1/person/1
@@ -165,20 +164,19 @@ To deploy the project on the production, Follow same run rules mentioned above.
 	  2)Authorization		 : << Above api token generated i.e. subjectToken >>
     
 	Response Payload::
-   {
-  "person": [
-    {
-      "id": 1,
+   		{
+  	"person": [
+   	  {
       "firstName": "Vaibhav",
       "lastName": "Pokale",
-      "age": "Vaibhav",
+      "age": "29",
       "favouriteColor": "Blue",
       "hobby": [
         "Chess",
         "Cricket",
-        "Foorball"
-			]
-		}
+				"Foorball"
+      ]
+    }
 	]
 	}
 
@@ -203,37 +201,37 @@ To deploy the project on the production, Follow same run rules mentioned above.
 				"Foorball"
       ]
     }
-  ]}
+ 	 ]}
     
-  Response Payload:: 
-  {
-  "person": [
-    {
-      "id": 1,
-      "firstName": "Vaibhav",
-      "lastName": "Pokale",
-      "age": "29",
-      "favouriteColor": "Blue",
-      "hobby": [
-        "Chess",
-        "Cricket",
-        "Foorball"
-      ]
-    }
-  ]
-}
+  	Response Payload:: 
+  		{
+	  "person": [
+	    {
+	      "id": 1,
+	      "firstName": "Vaibhav",
+	      "lastName": "Pokale",
+	      "age": "29",
+	      "favouriteColor": "Blue",
+	      "hobby": [
+		"Chess",
+		"Cricket",
+		"Foorball"
+	      ]
+	    }
+	  ]
+	}
 
-##6) Delete the person against the person_id API::
-    Url:: http://localhost:8080/personmanagement/v1/person/1
+## 6) Delete the person against the person_id API::
+    	Url:: http://localhost:8080/personmanagement/v1/person/1
 	Method Type:: Delete
-    Header Parameter:: 
-      1)Content-Type : application/json
-	  2)Authorization		 : << Above api token generated i.e. subjectToken >>
+   	Header Parameter:: 
+      		1)Content-Type : application/json
+	  	2)Authorization		 : << Above api token generated i.e. subjectToken >>
 	
 	Response Body:: HTTP STATUS code 204.
 
 #**Testing**
- 1) At parent project, postman collection is present.Please import that collection into postman.\
+ 1) *At parent project, postman collection is present.Please import that collection into postman.*\
  2) RestAssured Testing::\
     a) CT(component testing)is written for this project. \
     b)To generate the CT report, please run the ExecuteAPITester.java class. It is present in resource module test. This class wil generate the report.(Please make sure service is up and running before running the class)\
