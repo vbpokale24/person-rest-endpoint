@@ -13,18 +13,19 @@ Make sure your workspace is JDK/JRE Enabled.
 
 Do maven build on parent folder.
 
-For maven build. 
+**For maven build.** \
 a)Go to cmd ->go to folder_name of project\
 b)Type mvn clean install or mvn install \
  note::(Need to set maven home first if installing mvn)
 c)Go to resources module target folder \
-d)type java -jar resources-0.0.1-SNAPSHOT.jar note:(Check the execute permission)&nbsp;
+d)type java -jar resources-0.0.1-SNAPSHOT.jar note:(Check the execute permission)\
+
 Your development server is ready on the console.
 
-Another way to generate jar. &nbsp;
-a)import project in IDE &nbsp;
-b)right click on project(org-parent)->Run as->maven build -> in Goals type clean install &nbsp;
-c)Now jar is generated in target folder of resources module.&nbsp;
+**Another way to generate jar.** \
+a)import project in IDE. \
+b)right click on project(org-parent)->Run as->maven build -> in Goals type clean install. \
+c)Now jar is generated in target folder of resources module.\
  
 
 
@@ -34,8 +35,8 @@ To deploy the project on the production, Follow same run rules mentioned above.
 
 #API Description
 
- This Api is secured by **JWT**.To access the api, user need to pass the Authotization header in request.&nbsp;
- **Import the postman collection name embl-rest-Api.postman_collection.json in postman for getting all API in postman.Json collection   present in project itself.** 
+ This Api is secured by **JWT**.To access the api, user need to pass the Authotization header in request.\
+ **Import the postman collection name embl-rest-Api.postman_collection.json in postman for getting all API in postman.Json collection   present in project itself.** \
  
 
 ##1)Get the authorization token API:
