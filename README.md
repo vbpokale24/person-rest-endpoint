@@ -6,7 +6,7 @@ JDK 8
 Maven
 STS[Version3.8.4](optional)
 
-#Getting Started and Installment
+#**Getting Started and Installment**
 Copy this project folder in your workspace or you can clone by using <<URL>>
 
 Make sure your workspace is JDK/JRE Enabled.
@@ -29,11 +29,11 @@ c)Now jar is generated in target folder of resources module.\
  
 
 
-#Deployment
+#Deployment \
 To deploy the project on the production, Follow same run rules mentioned above.
 
 
-#API Description
+#**API Description**
 
  This Api is secured by **JWT**.To access the api, user need to pass the Authotization header in request.\
  **Import the postman collection name embl-rest-Api.postman_collection.json in postman for getting all API in postman.Json collection   present in project itself.** \
@@ -46,9 +46,11 @@ To deploy the project on the production, Follow same run rules mentioned above.
       1)Content-Type : application/json
 	  2)Basic		 : c2VjdXJpdHlBZG1pbg==
   Response ::
+       ```json
        {
   "subjectToken": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwiaWF0IjoxNTgwMTQwMDU3LCJzdWIiOiJBdXRob3JpemF0aW9uIiwiaXNzIjoiQWRtaW4iLCJleHAiOjE1ODAxNDM1MTR9.GybmBJIovQi7HAR5MeooI5cbrnDMg5_q7fRgYMTPAdo"
       }
+      ```
   ###Note: above token will be used to access the API.If token gets expired, user needs to generate the new token.
 
 ##2)Create the persons API::
@@ -58,7 +60,8 @@ To deploy the project on the production, Follow same run rules mentioned above.
       1)Content-Type : application/json
 	  2)Authorization		 : << Above api token generated i.e. subjectToken >>
   Request Payload:: 
-     {
+    ```json
+    {
 	"person": [
     {
       "firstName": "Vaibhav",
@@ -84,8 +87,10 @@ To deploy the project on the production, Follow same run rules mentioned above.
 		}
 	]
 	}
+	```
   
    Response Payload:: 
+    ```json
       {
   "person": [
     {
@@ -114,6 +119,7 @@ To deploy the project on the production, Follow same run rules mentioned above.
 		}
 	]
 	}
+	```
 
 ##3) Get all person API:
    Url::  http://localhost:8080/personmanagement/v1/person
@@ -227,11 +233,12 @@ To deploy the project on the production, Follow same run rules mentioned above.
 	
 	Response Body:: HTTP STATUS code 204.
 
-#Testing
- 1) At parent project, postman collection is present.Please import that collection into postman.
- 2) RestAssured Testing::
-    a) CT(component testing)is written for this project. To generate the CT report, please run the ExecuteAPITester.java class. It is present in resource module test. This class wil generate the report.(Please make sure service is up and running before running the class)
- 3) Junit is written for this project in resource module.	
+#**Testing**
+ 1) At parent project, postman collection is present.Please import that collection into postman.\
+ 2) RestAssured Testing::\
+    a) CT(component testing)is written for this project. \
+    b)To generate the CT report, please run the ExecuteAPITester.java class. It is present in resource module test. This class wil generate the report.(Please make sure service is up and running before running the class)\
+ 3) Junit is written for this project in resource module.\	
 	   
 
 Built With
