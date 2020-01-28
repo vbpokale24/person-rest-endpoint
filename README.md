@@ -17,7 +17,7 @@ For maven build.
 a)Go to cmd ->go to folder_name of project. 
 b)Type mvn clean install or mvn install 
  note::(Need to set maven home first if installing mvn)
-c)Go to resources module 
+c)Go to resources module target folder. 
 type java -jar resources-0.0.1-SNAPSHOT.jar note:(Check the execute permission)
 Your development server is ready on the console.
 
@@ -33,6 +33,7 @@ To deploy the project on the production, Follow same run rules mentioned above.
 API Description
 
  This Api is secured by JWT.To access the api, user need to pass the Authotization header in request.
+ Import the postman collection name embl-rest-Api.postman_collection.json in postman for getting all API in postman.Json collection   present in project itself. 
  
 
 ##1)Get the authorization token API:
