@@ -14,10 +14,10 @@ Make sure your workspace is JDK/JRE Enabled.
 Do maven build on parent folder.
 
 For maven build. 
-a)Go to cmd ->go to folder_name of project.&nbsp; 
-b)Type mvn clean install or mvn install &nbsp;
+a)Go to cmd ->go to folder_name of project\
+b)Type mvn clean install or mvn install \
  note::(Need to set maven home first if installing mvn)
-c)Go to resources module target folder. &nbsp;
+c)Go to resources module target folder \
 d)type java -jar resources-0.0.1-SNAPSHOT.jar note:(Check the execute permission)&nbsp;
 Your development server is ready on the console.
 
