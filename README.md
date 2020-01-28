@@ -7,17 +7,19 @@ Maven \
 STS[Version3.8.4](optional) \
 
 #**Getting Started and Installment**
-Copy this project folder in your workspace or you can clone by using <<URL>> \
+Copy this project folder in your workspace or you can clone by using https://github.com/vbpokale24/person-rest-endpoint.git
+	
+Make sure your workspace is JDK/JRE Enabled. 
 
-Make sure your workspace is JDK/JRE Enabled. \
-
-Do maven build on parent folder. \
+Do maven build on parent folder. 
 
 **For maven build.** \
 a)Go to cmd ->go to folder_name of project\
 b)Type mvn clean install or mvn install \
  note::(Need to set maven home first if installing mvn)
-c)Go to resources module target folder \
+ 
+c)Go to resources module target folder.
+
 d)type java -jar resources-0.0.1-SNAPSHOT.jar note:(Check the execute permission)\
 
 Your development server is ready on the console.
