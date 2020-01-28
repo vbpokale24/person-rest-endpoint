@@ -1,4 +1,4 @@
-#Project Title:: rest-api
+#Project Title:: person-rest-api (Please open this file in notepad++ for better look)
  This is a Spring Boot REST API application for CRUD operation.This project consist of three maven module(Resources,Service and persistence). For maven clean build, please always use **org-Parent** module.If you are using STS/eclipse to run the project, please run the Application.java class as spring boot application.Or you can follow the step given in Getting started and installment.
 
 #Prerequisites
@@ -39,7 +39,7 @@ To deploy the project on the production, Follow same run rules mentioned above.
  **Import the postman collection name embl-rest-Api.postman_collection.json in postman for getting all API in postman.Json collection   present in project itself.** \
  
 
-##1)Get the authorization token API:
+## 1)Get the authorization token API:
   Url::http://localhost:8080/securitymanagement/v1/getJwtToken
   Method Type :: GET
   Header Parameter:: 
@@ -53,7 +53,7 @@ To deploy the project on the production, Follow same run rules mentioned above.
       ```
   ###Note: above token will be used to access the API.If token gets expired, user needs to generate the new token.
 
-##2)Create the persons API::
+## 2)Create the persons API::
   Url::http://localhost:8080/personmanagement/v1/person
   Method Type:: POST
   Header Parameter:: 
@@ -121,7 +121,7 @@ To deploy the project on the production, Follow same run rules mentioned above.
 	}
 	```
 
-##3) Get all person API:
+## 3) Get all person API:
    Url::  http://localhost:8080/personmanagement/v1/person
    Method Type:: GET
    Header Parameter:: 
@@ -157,7 +157,7 @@ To deploy the project on the production, Follow same run rules mentioned above.
 	]
 	}
 	
-##4) Get person against person_id API::	
+## 4) Get person against person_id API::	
     Url::http://localhost:8080/personmanagement/v1/person/1
 	Method Type:: GET
     Header Parameter:: 
@@ -203,9 +203,8 @@ To deploy the project on the production, Follow same run rules mentioned above.
 				"Foorball"
       ]
     }
-  ]
-  }
-  
+  ]}
+    
   Response Payload:: 
   {
   "person": [
